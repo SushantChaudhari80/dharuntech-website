@@ -1,0 +1,8 @@
+<app-header />
+<main>
+  <app-hero /><app-about /><app-expertise /><app-products (demoRequested)="openDemo($event)" /><app-process /><app-why /><app-industries />
+  <section class="cta-section"><div><p class="eyebrow">LET'S BUILD WHAT'S NEXT</p><h2>Have an idea?<br><span>Let's engineer it.</span></h2><p>From software and AI systems to electronics, embedded solutions and hardware products, DharunTech helps transform technical ideas into practical solutions.</p></div><a class="button button-primary" href="#contact">Start a Conversation <span>↗</span></a></section>
+  <app-contact />
+</main>
+<app-footer />
+<app-demo-modal [open]="demoOpen" [title]="demoTitle" (closed)="closeDemo()" />

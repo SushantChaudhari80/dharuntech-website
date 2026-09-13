@@ -1,0 +1,9 @@
+<section class="section contact-section" id="contact"><div class="section-kicker">07 / CONTACT</div><div class="contact-layout"><div><h2>Let's make it<br><span>real.</span></h2><div class="contact-details"><p><strong>Email</strong><a href="mailto:support@dharuntech.in">support@dharuntech.in</a></p><p><strong>Phone</strong><a href="tel:8294595990">8294595990</a><a href="tel:9771731882">9771731882</a></p><p><strong>Address</strong><span>Shanti Kutir, 1st Floor, Dumari,<br>Muzaffarpur, Bihar, India</span></p></div></div>
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+<div class="form-row"><label>Full Name<input formControlName="name" type="text" placeholder="Your name"></label><label>Email<input formControlName="email" type="email" placeholder="you@company.com"></label></div>
+<div class="form-row"><label>Phone<input formControlName="phone" type="tel" placeholder="Your phone number"></label><label>Company<input formControlName="company" type="text" placeholder="Company name"></label></div>
+<label>Service / Requirement<input formControlName="service" type="text" placeholder="What can we engineer together?"></label>
+<label>Message<textarea formControlName="message" rows="4" placeholder="Tell us about your project"></textarea></label>
+<button class="button button-primary" type="submit">Send Enquiry <span>↗</span></button>
+<p class="form-status" role="status" aria-live="polite">{{submitted ? 'Thank you. Your enquiry has been received and our team will contact you shortly.' : ''}}</p>
+</form></div></section>

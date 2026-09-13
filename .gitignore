@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/.angular
+/.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+*.log
+.DS_Store

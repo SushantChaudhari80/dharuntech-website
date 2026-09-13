@@ -1,0 +1,9 @@
+<section class="section products-section" id="products"><div class="section-kicker">03 / PRODUCTS &amp; SOLUTIONS</div><div class="section-heading"><h2>Ideas becoming <span>intelligent products.</span></h2><p>Focused solutions designed for real technical workflows, with room to evolve as requirements grow.</p></div>
+<div class="product-feature" *ngFor="let product of products; let i=index" [class.reverse]="i===1" appReveal>
+  <div class="product-visual" [class.product-gallery]="!!product.gallery" [class.product-image-visual]="!product.gallery">
+    <ng-container *ngIf="product.gallery; else singleImage"><figure><img [src]="product.image" [alt]="product.alt"></figure><figure><img [src]="product.gallery" alt="Ship machine monitoring interface"></figure></ng-container>
+    <ng-template #singleImage><img [src]="product.image" [alt]="product.alt"></ng-template>
+    <span class="visual-label">{{product.label}}</span><div class="visual-status">{{product.status}} <strong>●</strong></div>
+  </div>
+  <div class="product-copy"><p class="product-number">{{product.number}}</p><h3>{{product.title}}<br><span>{{product.highlight}}</span></h3><p>{{product.description}}</p><div class="tag-list"><span *ngFor="let tag of product.tags">{{tag}}</span></div><button class="text-button demo-button" type="button" (click)="openDemo(product)">Watch Demo <span>▶</span></button></div>
+</div></section>
