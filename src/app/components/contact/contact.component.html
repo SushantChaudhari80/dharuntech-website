@@ -4,6 +4,6 @@
 <div class="form-row"><label>Phone<input formControlName="phone" type="tel" placeholder="Your phone number"></label><label>Company<input formControlName="company" type="text" placeholder="Company name"></label></div>
 <label>Service / Requirement<input formControlName="service" type="text" placeholder="What can we engineer together?"></label>
 <label>Message<textarea formControlName="message" rows="4" placeholder="Tell us about your project"></textarea></label>
-<button class="button button-primary" type="submit">Send Enquiry <span>↗</span></button>
-<p class="form-status" role="status" aria-live="polite">{{submitted ? 'Thank you. Your enquiry has been received and our team will contact you shortly.' : ''}}</p>
+<button class="button button-primary" type="submit" [disabled]="submitting">{{submitting ? 'Sending...' : 'Send Enquiry'}} <span>↗</span></button>
+<p class="form-status" role="status" aria-live="polite">{{submitted ? 'Thank you. Your enquiry has been received and our team will contact you shortly.' : errorMessage}}</p>
 </form></div></section>

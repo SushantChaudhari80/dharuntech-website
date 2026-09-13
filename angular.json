@@ -45,6 +45,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "proxyConfig": "proxy.conf.json" },
           "configurations": {
             "production": { "buildTarget": "dharuntech-web:build:production" },
             "development": { "buildTarget": "dharuntech-web:build:development" }
