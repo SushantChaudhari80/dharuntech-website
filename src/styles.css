@@ -1333,6 +1333,11 @@ textarea {
         display: none
     }
 }
+@media(max-width:680px) {
+    .process-grid {
+        grid-template-columns: 1fr
+    }
+}
 /* Angular implementation safeguards */
 html { scroll-padding-top: 88px; }
 section[id] { scroll-margin-top: 88px; }
